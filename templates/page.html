@@ -1,10 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My Portfolio</title>
-</head>
-<body>
-    <h1>Welcome to My Portfolio</h1>
-    <p>This is a basic portfolio template.</p>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}FastAPI Starter{% endblock %}
+{% block head %}
+{{ super() }}
+
+{% endblock %}
+
+{% block page_content %}
+{% include 'include/sidebar.html' %}
+<h1>
+    Welcome to FastAPI Starter.
+</h1>
+
+{{data.page}}
+
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+
+
+{% endblock %}
