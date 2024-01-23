@@ -9,7 +9,7 @@ const CONFIG = {
    * If you are deploying to https://<USERNAME>.github.io/<REPO_NAME>/,
    * for example your repository is at https://github.com/arifszn/portfolio, then set base to '/portfolio/'.
    */
-  base: '/james/',
+  base: '/',
   projects: {
     github: {
       display: true, // Display GitHub projects?
@@ -20,12 +20,12 @@ const CONFIG = {
         limit: 8, // How many projects to display.
         exclude: {
           forks: false, // Forked projects will not be displayed if set to true.
-          projects: [], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
+          projects: ['jimdb8687/FlutterChatAppTutorial','jimdb8687/langchain-tutorials','jimdb8687/cheatsheets'], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
         },
       },
       manual: {
         // Properties for manually specifying projects
-        projects: ['arifszn/gitprofile', 'arifszn/pandora'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+        projects: ['jimdb8687/FinGPT ', 'jimdb8687/finrl'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
       },
     },
     external: {
@@ -33,7 +33,7 @@ const CONFIG = {
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
-          title: 'Project Name',
+          title: 'RL Research',
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
           imageUrl:
@@ -41,7 +41,7 @@ const CONFIG = {
           link: 'https://example.com',
         },
         {
-          title: 'Project Name',
+          title: 'Document Intelligence',
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
           imageUrl:
@@ -52,23 +52,22 @@ const CONFIG = {
     },
   },
   seo: {
-    title: 'Portfolio of Ariful Alam',
+    title: 'Portfolio of James Brendamour',
     description: '',
     imageURL: '',
   },
   social: {
-    linkedin: 'ariful-alam',
-    twitter: 'arif_szn',
-    mastodon: 'arifszn@mastodon.social',
+    linkedin: '',
+    mastodon: '',
     youtube: '', // example: 'pewdiepie'
     dribbble: '',
     behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
+    medium: '@jamesbrendamour7',
+    dev: 'jimdb77',
     stackoverflow: '', // example: '1/jeff-atwood'
-    website: 'https://www.arifszn.com',
-    phone: '',
-    email: 'arifulalamszn@gmail.com',
+    website: 'https://www.jamesbrendamour.me',
+    phone: '513-543-8687',
+    email: 'jamesbrendamour3@gmail.com',
   },
   resume: {
     fileUrl:
@@ -117,6 +116,13 @@ const CONFIG = {
       to: 'August 2021',
       companyLink: 'https://example.com',
     },
+    {
+      company: 'Seamens R&D',
+      position: 'Intern in Data Science & Machine Learning for AR & VR',
+      from: 'July 2019',
+      to: 'August 2021',
+      companyLink: 'https://example.com',
+    }
   ],
   certifications: [
     {
@@ -144,7 +150,7 @@ const CONFIG = {
   // Display articles from your medium or dev account. (Optional)
   blog: {
     source: 'dev', // medium | dev
-    username: 'arifszn', // to hide blog section, keep it empty
+    username: 'jimdb77', // to hide blog section, keep it empty
     limit: 3, // How many articles to display. Max is 10.
   },
   googleAnalytics: {
@@ -156,7 +162,7 @@ const CONFIG = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'nord',
+    defaultTheme: 'business',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
@@ -170,42 +176,54 @@ const CONFIG = {
     displayAvatarRing: true,
 
     // Available themes. To remove any theme, exclude from here.
+    // themes: [
+    //   'dark',
+    //   'light',
+    //   'cupcake',
+    //   'bumblebee',
+    //   'emerald',
+    //   'corporate',
+    //   'synthwave',
+    //   'retro',
+    //   'cyberpunk',
+    //   'valentine',
+    //   'halloween',
+    //   'garden',
+    //   'forest',
+    //   'aqua',
+    //   'lofi',
+    //   'pastel',
+    //   'fantasy',
+    //   'wireframe',
+    //   'black',
+    //   'luxury',
+    //   'dracula',
+    //   'cmyk',
+    //   'autumn',
+    //   'business',
+    //   'acid',
+    //   'lemonade',
+    //   'night',
+    //   'coffee',
+    //   'winter',
+    //   'dim',
+    //   'nord',
+    //   'sunset',
+    //   'procyon',
+    // ],
     themes: [
       'dark',
-      'light',
-      'cupcake',
-      'bumblebee',
-      'emerald',
-      'corporate',
-      'synthwave',
-      'retro',
-      'cyberpunk',
-      'valentine',
-      'halloween',
-      'garden',
       'forest',
-      'aqua',
-      'lofi',
-      'pastel',
-      'fantasy',
-      'wireframe',
       'black',
       'luxury',
       'dracula',
-      'cmyk',
-      'autumn',
       'business',
-      'acid',
-      'lemonade',
       'night',
-      'coffee',
-      'winter',
       'dim',
       'nord',
       'sunset',
       'procyon',
     ],
-
     // Custom theme, applied to `procyon` theme
     customTheme: {
       primary: '#fc055b',
@@ -219,11 +237,11 @@ const CONFIG = {
   },
 
   // Optional Footer. Supports plain text or HTML.
-  footer: `Made with <a 
-      class="text-primary" href="https://github.com/arifszn/gitprofile"
+  footer: `Made b James Brendamour 
+      class="text-primary" href="https://github.com/jimdb8687/jamesbrendamour.me"
       target="_blank"
       rel="noreferrer"
-    >GitProfile</a> and ❤️`,
+    >GitProfile</> and ❤️`,
 
   enablePWA: true,
 };
