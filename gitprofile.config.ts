@@ -20,7 +20,11 @@ const CONFIG = {
         limit: 8, // How many projects to display.
         exclude: {
           forks: false, // Forked projects will not be displayed if set to true.
-          projects: ['jimdb8687/FlutterChatAppTutorial','jimdb8687/langchain-tutorials','jimdb8687/cheatsheets'], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
+          projects: [
+            'jimdb8687/FlutterChatAppTutorial',
+            'jimdb8687/langchain-tutorials',
+            'jimdb8687/cheatsheets',
+          ], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
         },
       },
       manual: {
@@ -122,7 +126,7 @@ const CONFIG = {
       from: 'July 2019',
       to: 'August 2021',
       companyLink: 'https://example.com',
-    }
+    },
   ],
   certifications: [
     {
@@ -241,7 +245,7 @@ const CONFIG = {
       class="text-primary" href="https://github.com/jimdb8687/jamesbrendamour.me"
       target="_blank"
       rel="noreferrer"
-    >GitProfile</> and ❤️`,
+    >GitProfile</>`,
 
   enablePWA: true,
 };
