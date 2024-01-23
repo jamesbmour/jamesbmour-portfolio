@@ -88,3 +88,5 @@ typings/
 .dynamodb/
 
 .idea/
+
+.vite/deps_temp_39650fc5/
