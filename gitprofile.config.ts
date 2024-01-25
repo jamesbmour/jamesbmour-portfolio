@@ -1,4 +1,3 @@
-// gitprofile.config.ts
 
 const CONFIG = {
   github: {
@@ -38,6 +37,23 @@ const CONFIG = {
       projects: [
         {
           title: 'RL Research',
+          description:
+            'RL white papers, research, and implementations and analysis of cooperative multi-agent PPO on the' +
+            ' overcooked environment',
+          imageUrl:
+            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+          link: 'https://example.com',
+        },
+        {
+          title: 'Document Intelligence',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+          imageUrl:
+            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+          link: 'https://example.com',
+        },
+        {
+          title: 'Document Intelligence',
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
           imageUrl:
@@ -103,7 +119,7 @@ const CONFIG = {
     'Tableau',
     'Power BI',
     'Java',
-
+    'Redis',
   ],
   experiences: [
     {
@@ -111,14 +127,14 @@ const CONFIG = {
       position: 'Technology Consultant',
       from: 'September 2021',
       to: 'Present',
-      companyLink: 'https://example.com',
+      companyLink: 'https://ey.com',
     },
     {
       company: 'Freelance Consultant',
       position: 'Data Science & Machine Leaning Consultant',
       from: 'July 2019',
       to: 'August 2021',
-      companyLink: 'https://example.com',
+      companyLink: '',
     },
     {
       company: 'Seamens R&D',
@@ -155,7 +171,7 @@ const CONFIG = {
   blog: {
     source: 'dev', // medium | dev
     username: 'jimdb77', // to hide blog section, keep it empty
-    limit: 3, // How many articles to display. Max is 10.
+    limit: 4, // How many articles to display. Max is 10.
   },
   googleAnalytics: {
     id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
@@ -180,54 +196,54 @@ const CONFIG = {
     displayAvatarRing: true,
 
     // Available themes. To remove any theme, exclude from here.
-    // themes: [
-    //   'dark',
-    //   'light',
-    //   'cupcake',
-    //   'bumblebee',
-    //   'emerald',
-    //   'corporate',
-    //   'synthwave',
-    //   'retro',
-    //   'cyberpunk',
-    //   'valentine',
-    //   'halloween',
-    //   'garden',
-    //   'forest',
-    //   'aqua',
-    //   'lofi',
-    //   'pastel',
-    //   'fantasy',
-    //   'wireframe',
-    //   'black',
-    //   'luxury',
-    //   'dracula',
-    //   'cmyk',
-    //   'autumn',
-    //   'business',
-    //   'acid',
-    //   'lemonade',
-    //   'night',
-    //   'coffee',
-    //   'winter',
-    //   'dim',
-    //   'nord',
-    //   'sunset',
-    //   'procyon',
-    // ],
     themes: [
       'dark',
+      'light',
+      'cupcake',
+      'bumblebee',
+      'emerald',
+      'corporate',
+      'synthwave',
+      'retro',
+      'cyberpunk',
+      'valentine',
+      'halloween',
+      'garden',
       'forest',
+      'aqua',
+      'lofi',
+      'pastel',
+      'fantasy',
+      'wireframe',
       'black',
       'luxury',
       'dracula',
+      'cmyk',
+      'autumn',
       'business',
+      'acid',
+      'lemonade',
       'night',
+      'coffee',
+      'winter',
       'dim',
       'nord',
       'sunset',
       'procyon',
     ],
+    // themes: [
+    //   'dark',
+    //   'forest',
+    //   'black',
+    //   'luxury',
+    //   'dracula',
+    //   'business',
+    //   'night',
+    //   'dim',
+    //   'nord',
+    //   'sunset',
+    //   'procyon',
+    // ],
     // Custom theme, applied to `procyon` theme
     customTheme: {
       primary: '#fc055b',
@@ -241,11 +257,7 @@ const CONFIG = {
   },
 
   // Optional Footer. Supports plain text or HTML.
-  footer: `Made b James Brendamour 
-      class="text-primary" href="https://github.com/jimdb8687/jamesbrendamour.me"
-      target="_blank"
-      rel="noreferrer"
-    >GitProfile</>`,
+  footer: `Made b James Brendamour.`,
 
   enablePWA: true,
 };
