@@ -20,7 +20,11 @@ const CONFIG = {
         limit: 8, // How many projects to display.
         exclude: {
           forks: false, // Forked projects will not be displayed if set to true.
-          projects: ['jimdb8687/FlutterChatAppTutorial','jimdb8687/langchain-tutorials','jimdb8687/cheatsheets'], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
+          projects: [
+            'jimdb8687/FlutterChatAppTutorial',
+            'jimdb8687/langchain-tutorials',
+            'jimdb8687/cheatsheets',
+          ], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
         },
       },
       manual: {
@@ -58,13 +62,13 @@ const CONFIG = {
   },
   social: {
     linkedin: '',
-    mastodon: '',
+    // mastodon: '',
     youtube: '', // example: 'pewdiepie'
-    dribbble: '',
-    behance: '',
+    // dribbble: '',
+    // behance: '',
     medium: '@jamesbrendamour7',
     dev: 'jimdb77',
-    stackoverflow: '', // example: '1/jeff-atwood'
+    // stackoverflow: '', // example: '1/jeff-atwood'
     website: 'https://www.jamesbrendamour.me',
     phone: '513-543-8687',
     email: 'jamesbrendamour3@gmail.com',
@@ -122,7 +126,7 @@ const CONFIG = {
       from: 'July 2019',
       to: 'August 2021',
       companyLink: 'https://example.com',
-    }
+    },
   ],
   certifications: [
     {
@@ -241,7 +245,7 @@ const CONFIG = {
       class="text-primary" href="https://github.com/jimdb8687/jamesbrendamour.me"
       target="_blank"
       rel="noreferrer"
-    >GitProfile</> and ❤️`,
+    >GitProfile</>`,
 
   enablePWA: true,
 };
