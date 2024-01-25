@@ -62,13 +62,13 @@ const CONFIG = {
   },
   social: {
     linkedin: '',
-    mastodon: '',
+    // mastodon: '',
     youtube: '', // example: 'pewdiepie'
-    dribbble: '',
-    behance: '',
+    // dribbble: '',
+    // behance: '',
     medium: '@jamesbrendamour7',
     dev: 'jimdb77',
-    stackoverflow: '', // example: '1/jeff-atwood'
+    // stackoverflow: '', // example: '1/jeff-atwood'
     website: 'https://www.jamesbrendamour.me',
     phone: '513-543-8687',
     email: 'jamesbrendamour3@gmail.com',
