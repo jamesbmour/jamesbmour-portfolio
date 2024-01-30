@@ -12,7 +12,6 @@
   "bugs": {
     "url": "https://github.com/arifszn/gitprofile/issues"
   },
-
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -24,6 +23,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@chatscope/chat-ui-kit-react": "^1.10.1",
+    "flowise-embed-react": "^1.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

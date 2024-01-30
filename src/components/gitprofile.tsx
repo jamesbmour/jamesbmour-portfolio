@@ -29,7 +29,7 @@ import GithubProjectCard from './github-project-card';
 import ExternalProjectCard from './external-project-card';
 import BlogCard from './blog-card';
 import Footer from './footer';
-
+import ChatBubble from './ChatBubble';
 /**
  * Renders the GitProfile component.
  *
@@ -279,6 +279,7 @@ const GitProfile = ({ config }: { config: Config }) => {
                   </div>
                 </div>
               </div>
+              <ChatBubble /> 
             </div>
             {sanitizedConfig.footer && (
               <footer
