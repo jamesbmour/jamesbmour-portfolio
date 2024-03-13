@@ -2,7 +2,7 @@
 
 const CONFIG = {
   github: {
-    username: 'jimdb8687', // Your GitHub org/user name. (This is the only required config)
+    username: 'jamesbmour', // Your GitHub org/user name. (This is the only required config)
   },
   /**
    * If you are deploying to https://<USERNAME>.github.io/, for example your repository is at https://github.com/arifszn/arifszn.github.io, set base to '/'.
@@ -21,15 +21,15 @@ const CONFIG = {
         exclude: {
           forks: false, // Forked projects will not be displayed if set to true.
           projects: [
-            'jimdb8687/FlutterChatAppTutorial',
-            'jimdb8687/langchain-tutorials',
-            'jimdb8687/cheatsheets',
+            'jamesbmour/FlutterChatAppTutorial',
+            'jamesbmour/langchain-tutorials',
+            'jamesbmour/cheatsheets',
           ], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
         },
       },
       manual: {
         // Properties for manually specifying projects
-        projects: ['jimdb8687/FinGPT ', 'jimdb8687/finrl'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+        projects: ['jamesbmour/FinGPT ', 'jamesbmour/finrl'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
       },
     },
     external: {
@@ -242,7 +242,7 @@ const CONFIG = {
 
   // Optional Footer. Supports plain text or HTML.
   footer: `Made b James Brendamour 
-      class="text-primary" href="https://github.com/jimdb8687/jamesbrendamour.me"
+      class="text-primary" href="https://github.com/jamesbmour/jamesbrendamour.me"
       target="_blank"
       rel="noreferrer"
     >GitProfile</>`,
