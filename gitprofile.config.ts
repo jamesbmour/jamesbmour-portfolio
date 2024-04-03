@@ -67,7 +67,7 @@ const CONFIG = {
     // dribbble: '',
     // behance: '',
     medium: '@jamesbrendamour7',
-    dev: 'jimdb77',
+    dev: 'jamesbmour',
     // stackoverflow: '', // example: '1/jeff-atwood'
     website: 'https://www.jamesbrendamour.me',
     phone: '513-543-8687',
@@ -154,8 +154,8 @@ const CONFIG = {
   // Display articles from your medium or dev account. (Optional)
   blog: {
     source: 'dev', // medium | dev
-    username: 'jimdb77', // to hide blog section, keep it empty
-    limit: 3, // How many articles to display. Max is 10.
+    username: 'jamesbmour', // to hide blog section, keep it empty
+    limit: 5, // How many articles to display. Max is 10.
   },
   googleAnalytics: {
     id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
