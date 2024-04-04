@@ -56,12 +56,12 @@ const CONFIG = {
     },
   },
   seo: {
-    title: 'Portfolio of James Brendamour',
+    title: 'James Brendamour Portfolio',
     description: '',
     imageURL: '',
   },
   social: {
-    linkedin: '',
+    linkedin: 'www.linkedin.com/in/james-brendamour-4b1782112/',
     // mastodon: '',
     youtube: '', // example: 'pewdiepie'
     // dribbble: '',
@@ -69,20 +69,19 @@ const CONFIG = {
     medium: '@jamesbrendamour7',
     dev: 'jamesbmour',
     // stackoverflow: '', // example: '1/jeff-atwood'
-    website: 'https://www.jamesbrendamour.me',
+    website: 'www.jamesbrendamour.me',
     phone: '513-543-8687',
     email: 'jamesbrendamour3@gmail.com',
   },
   resume: {
-    fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+    fileUrl: './src/data/James-Brendamour-Resume.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'Python',
     'NLP',
     'RL',
     'Data Science',
-    'LLM' ,
+    'LLM',
     'Machine Learning',
     'Deep Learning',
     'PyTorch',
