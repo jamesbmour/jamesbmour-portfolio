@@ -7,26 +7,31 @@
 
 .chat-toggle {
     padding: 10px 20px;
-    background-color: #0056b3;
+    background-color: #213f6a;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     outline: none;
+    
 }
 
 .chat-window {
     position: absolute;
     bottom: 50px;
     right: 0;
-    width: 300px;
-    height: 400px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
+    width: 500px;
+    height: 600px;
+    border: 1px solid #cccccc97;
+    background-color: #1d1d1d;
     box-shadow: 2px 2px 20px rgba(0,0,0,0.2);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-radius: 10px;
+    overflow: hidden;
+    
+    
 }
 
 .message-container {
@@ -45,18 +50,20 @@
 
 .message.user {
     align-self: flex-end;
-    background-color: #007bff;
+    background-color: #213f6a;
     color: white;
 }
 
 .message.bot {
     align-self: flex-start;
-    background-color: #e9ecef;
+    background-color: #4b4a4a ;
 }
 
 .message-input {
     padding: 10px;
     border: none;
+    /* border: 1px solid #cccccc97; */
+
     width: 100%;
     box-sizing: border-box;
 }

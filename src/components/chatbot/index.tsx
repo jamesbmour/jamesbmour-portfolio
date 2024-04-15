@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import styles from './Chatbot.module.css'; // Import as an object
+import axios from 'axios';
 import './Chatbot.css'; // Import as a string
 
 // Define types for messages
@@ -23,15 +23,35 @@ const Chatbot: React.FC = () => {
       const userInput = event.currentTarget.value;
       sendMessage(userInput, 'user');
       event.currentTarget.value = ''; // Clear input field
-      handleBotResponse();
+      handleBotResponse(userInput);
     }
   };
 
-  const handleBotResponse = () => {
-    // Simulate a bot response
-    setTimeout(() => {
-      sendMessage("I'm not able to respond to that right now.", 'bot');
-    }, 1000);
+  const handleBotResponse = (userInput: string) => {
+    // Placeholder for your API key, replace with a secure method to handle keys
+    const apiKey = 'your-openai-api-key';
+    const apiUrl = 'https://api.openai.com/v1/engines/davinci/completions';
+
+    const headers = {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${apiKey}`,
+    };
+
+    const data = {
+      prompt: userInput,
+      max_tokens: 150,
+    };
+
+    axios
+      .post(apiUrl, data, { headers })
+      .then((response) => {
+        const botResponse = response.data.choices[0].text.trim();
+        sendMessage(botResponse, 'bot');
+      })
+      .catch((error) => {
+        console.error('Error responding:', error);
+        sendMessage("I'm having trouble responding right now.", 'bot');
+      });
   };
 
   return (
