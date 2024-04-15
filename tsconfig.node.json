@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    // "types": ["node"], // This line tells TypeScript to include Node.js types globally
     "composite": true,
     "skipLibCheck": true,
     "module": "ESNext",
