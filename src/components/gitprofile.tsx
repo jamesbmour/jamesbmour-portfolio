@@ -30,6 +30,7 @@ import ExternalProjectCard from "./external-project-card";
 import BlogCard from "./blog-card";
 import Footer from "./footer";
 import Chatbot from "./chatbot";
+import Header from './header'; // Adjust the path as necessary
 
 /**
  * Renders the GitProfile component.
@@ -139,7 +140,7 @@ const GitProfile = ({ config }: { config: Config }) => {
       setError(null);
       setTheme(getInitialTheme(sanitizedConfig.themeConfig));
       setupHotjar(sanitizedConfig.hotjar);
-      loadData();
+      loadData().then(r => r);
     }
   }, [sanitizedConfig, loadData]);
 
@@ -184,6 +185,7 @@ const GitProfile = ({ config }: { config: Config }) => {
   return (
     <HelmetProvider>
       <div className="fade-in h-screen">
+        <Header /> {/* Add the Header component here */}
         {error ? (
           <ErrorPage
             status={error.status}

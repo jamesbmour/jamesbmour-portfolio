@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import './Chatbot.css';
+// import styles from './Chatbot.module.css'; // Import as an object
+import './Chatbot.css'; // Import as a string
+
 
 // Define types for messages
 interface Message {
@@ -22,11 +24,11 @@ const Chatbot: React.FC = () => {
             const userInput = event.currentTarget.value;
             sendMessage(userInput, 'user');
             event.currentTarget.value = ''; // Clear input field
-            handleBotResponse(userInput);
+            handleBotResponse();
         }
     };
 
-    const handleBotResponse = (userInput: string) => {
+    const handleBotResponse = () => {
         // Simulate a bot response
         setTimeout(() => {
             sendMessage("I'm not able to respond to that right now.", 'bot');

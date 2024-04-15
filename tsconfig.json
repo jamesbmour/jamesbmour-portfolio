@@ -19,6 +19,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src", "global.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }],
