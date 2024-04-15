@@ -31,6 +31,7 @@ import BlogCard from './blog-card';
 import Footer from './footer';
 import Chatbot from './chatbot';
 import Header from './header'; // Adjust the path as necessary
+import StreamlitApp from './streamlit-chat';
 
 /**
  * Renders the GitProfile component.
@@ -301,7 +302,8 @@ const GitProfile = ({ config }: { config: Config }) => {
                 </div>
               </footer>
             )}
-            <Chatbot />
+            {/* <Chatbot /> */}
+            <StreamlitApp />
           </>
         )}
       </div>

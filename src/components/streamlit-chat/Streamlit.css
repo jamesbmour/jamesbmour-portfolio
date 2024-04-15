@@ -1,0 +1,79 @@
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chat-toggle {
+    padding: 10px 20px;
+    background-color: #213f6a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    
+}
+
+.chat-window {
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    width: 600px;
+    height: 600px;
+    border: 1px solid #cccccc97;
+    background-color: #1d1d1d;
+    box-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    /* overflow: hidden; */
+    
+    
+}
+/* 
+.message-container {
+    padding: 10px;
+    overflow-y: auto;
+    flex-grow: 1;
+} */
+
+/* .message {
+    margin: 5px 0;
+    padding: 8px 10px;
+    border-radius: 12px;
+    max-width: 70%;
+    word-wrap: break-word;
+} */
+
+.message.user {
+    align-self: flex-end;
+    background-color: #213f6a;
+    color: white;
+}
+
+.message.bot {
+    align-self: flex-start;
+    background-color: #4b4a4a ;
+}
+
+
+.streamlit-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 700px;
+    height: 700px;
+    z-index: 1000;
+}
+
+.streamlit-iframe-container {
+    width: 100%;
+    height: 100%;
+    /* Adjust height as needed */
+    border: none;
+    /* Removes iframe border */
+    overflow: hidden;
+}
