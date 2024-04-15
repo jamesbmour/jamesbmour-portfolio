@@ -76,22 +76,30 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
               : profile.bio}
           </div>
         </div>
-        {resumeFileUrl &&
-          (loading ? (
-            <div className="mt-6">
-              {skeleton({ widthCls: 'w-40', heightCls: 'h-8' })}
-            </div>
-          ) : (
+        <div className="flex gap-2 mt-6">
+          {resumeFileUrl && (
             <a
               href={resumeFileUrl}
               target="_blank"
-              className="btn btn-outline btn-sm text-xs mt-6 opacity-50"
+              className="btn btn-outline btn-sm text-xs opacity-50"
               download
               rel="noreferrer"
             >
               Download Resume
             </a>
-          ))}
+          )}
+          {/* Add Contact Button */}
+          <button
+            className="btn btn-outline btn-sm text-xs opacity-50"
+            onClick={() => {
+              // Implement contact download or display functionality here
+              alert('Contact information added to your address book!');
+              // add contact to address bo
+            }}
+          >
+            Add Contact
+          </button>
+        </div>
       </div>
     </div>
   );

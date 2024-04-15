@@ -66,7 +66,7 @@ const CONFIG = {
     imageURL: '',
   },
   social: {
-    linkedin: 'www.linkedin.com/in/james-brendamour-4b1782112/',
+    linkedin: 'james-b-4b1782112',
     // mastodon: '',
     youtube: '', // example: 'pewdiepie'
     // dribbble: '',
