@@ -24,7 +24,7 @@ load_dotenv()
 
 # Access the API key
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 # Create a FastAPI instance
 app = FastAPI()
 
@@ -42,21 +42,12 @@ class ChatRequest(BaseModel):
 
 @app.post("/chat/")
 async def create_chat_message(chat_request: ChatRequest):
-    url = "https://api.openai.com/v1/completions"
-    
-    headers = {
-        "Authorization": f"Bearer {OPENAI_API_KEY}",
-        "Content-Type": "application/json",
-    }
-    payload = json.dumps({
-    "model": "gpt-3.5-turbo-instruct",
-    "prompt": chat_request.message,
-    "max_tokens": 250,
-    "temperature": 0.7
-    })
     chat = ChatOpenAI(
-        api_key = OPENAI_API_KEY,
-        model = "gpt-3.5-turbo",
+        openai_api_base= "https://openrouter.ai/api/v1",
+        # api_key = OPENAI_API_KEY,
+        api_key = OPENROUTER_API_KEY,
+        # model = "gpt-3.5-turbo",
+        model = "mistralai/mistral-7b-instruct:free",
         temperature = 0.7,
         max_tokens = 250
     )
