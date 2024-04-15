@@ -14,6 +14,7 @@ import json
 
 # from langchain import ChatOpenAI, LangChain
 from langchain.chat_models import ChatOpenAI
+from langchain_core.messages import HumanMessage
 
 
 # from langchain import LangChain, ChatOpenAI
@@ -53,16 +54,22 @@ async def create_chat_message(chat_request: ChatRequest):
     "max_tokens": 250,
     "temperature": 0.7
     })
-    response = requests.request("POST", url, headers=headers, data=payload)
-
-    # response = requests.post(url, json=payload, headers=headers)
-    # check if the response is successful
-    response.raise_for_status()
-    response_data = response.json()
-    print(response_data)
-    chat_response = response_data.get('choices', [{}])[0].get('text', '').strip()
-    print(chat_response)
-    return {"response": chat_response}
+    chat = ChatOpenAI(
+        api_key = OPENAI_API_KEY,
+        model = "gpt-3.5-turbo",
+        temperature = 0.7,
+        max_tokens = 250
+    )
+    
+    response = chat.invoke(
+    [
+        HumanMessage(
+            content=chat_request.message
+        )
+    ]    
+    )
+    print(response)
+    return {"response": response.content}
 
 
 
