@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './Streamlit.css'; // Ensure you have corresponding CSS for styling
 
 interface Message {
   text: string;
@@ -8,73 +7,20 @@ interface Message {
 
 const StreamlitApp: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [messages, setMessages] = useState<Message[]>([]);
-  const [inputText, setInputText] = useState<string>('');
 
   const toggleChat = () => setIsOpen(!isOpen);
 
-  const sendMessage = (text: string, sender: 'user' | 'bot') => {
-    if (text.trim().length > 0) {
-      setMessages((prevMessages) => [...prevMessages, { text, sender }]);
-    }
-  };
-
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setInputText(event.target.value);
-  };
-
-  const handleUserInput = async (
-    event: React.KeyboardEvent<HTMLInputElement>,
-  ) => {
-    if (event.key === 'Enter' && inputText.trim()) {
-      sendMessage(inputText, 'user');
-      await handleBotResponse(inputText);
-      setInputText(''); // Clear input field after sending
-    }
-  };
-
-  const handleBotResponse = async (userInput: string) => {
-    const apiUrl = 'http://localhost:8000/chat/';
-    const data = {
-      message: userInput,
-    };
-
-    try {
-      const response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-      const result = await response.json();
-      sendMessage(result.response, 'bot');
-    } catch (error) {
-      console.error('Error responding:', error);
-      sendMessage("I'm having trouble responding right now.", 'bot');
-    }
-  };
-
-  const clearChat = () => {
-    setMessages([]); // Clear the chat history
-  };
-
   return (
-    <div className="chatbot-container">
-      <button onClick={toggleChat} className="chat-toggle">
+    <div className="fixed bottom-5 right-5 z-50">
+      <button onClick={toggleChat} className="px-5 py-2.5 bg-blue-800 text-white rounded-lg cursor-pointer focus:outline-none">
         {isOpen ? 'Close Chat' : 'Chat'}
       </button>
       {isOpen && (
-        <div className="chat-window">
-
+        <div className="absolute bottom-12 right-0 w-[800px] h-[600px] bg-gray-900 border border-gray-300 shadow-2xl rounded-lg overflow-hidden">
           <iframe
             src="https://pdfchat-eustkxjfhdghra4qgvs2yr.streamlit.app/?embed=true"
             title="Streamlit Chat"
-            width="100%"
-            height="600"
-            // height="450"
-            // style={{ width: "100%", border: "none" }}
-            className="streamlit-chat "
+            className="w-full h-full border-none"
           />
         </div>
       )}
