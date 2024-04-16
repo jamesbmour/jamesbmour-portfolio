@@ -404,6 +404,11 @@ interface Config {
    * Enable PWA
    */
   enablePWA?: boolean;
+
+  /**
+   * Enable Chatbot
+   */
+  enableChatbot?: boolean;
 }
 
 declare const CONFIG: Config;

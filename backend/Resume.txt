@@ -1,0 +1,137 @@
+Contact
+5135438687 (Mobile)
+jamesbrendamour7@gmail.com
+www.linkedin.com/in/james-
+brendamour-4b1782112 (LinkedIn)
+dev.to/jamesbmour (Blog)
+github.com/jamesbmour (Other)
+Top Skills
+Tableau
+Microsoft Power BI
+Computer Science
+Certifications
+EY Robotic process automation -
+Bronze
+  
+James Brendamour
+Bringing technology closer to your business – One solution at a time.
+Denver, Colorado, United States
+Experience
+Bmours
+Freelance Consultant
+April 2022 - Present (2 years 1 month)
+Denver, Colorado, United States
+Developed and launched custom websites for small businesses, integrating
+advanced chat functionalities to enhance customer engagement and support.
+Provided tailored networking solutions to improve connectivity, streamline
+operations, and enable seamless communication for small business clients.
+Enhanced security measures for small businesses, implementing robust
+cybersecurity protocols to safeguard digital assets and customer data from
+potential threats.
+EY
+Information Technology Consultant
+October 2018 - September 2022 (4 years)
+Denver, Colorado
+- Primary developer on a large-scale Document Intelligence project,
+developing sophisticated NLP models to empower clients with the ability to
+process and extract critical data from extensive legal documents. Pioneered
+a continuous improvement protocol allowing the client to refine the model's
+accuracy over time. Introduced an interactive chat feature enabling users
+to query the document directly and implemented a user-friendly GUI that
+highlights the source of the queried information within the document for
+streamlined verification and review.
+- Spearheaded the IT transformation strategy for a major air conditioning
+manufacturer, achieving $3.73M in annual savings and a 2.5-year ROI by
+optimizing the enterprise architecture during the company's separation from its
+parent organization.
+- Drove efficiency in regression testing for an international automotive
+company by automating 150 test processes in SAP S/4HANA, saving 1,800
+FTE hours per deployment, leading the Quality Review and Control Team for
+code excellence.
+ Page 1 of 4
+  
+Facilitated the S4 Intelligent Automation move by collaborating with UiPath
+engineers to establish requirements and creating a library of 180 standard
+SAP transaction automations.
+- Executed comprehensive customer segmentation for a leading gas &
+electric company, aligning market sizing and purchasing propensity with
+product strategies for 5 new products, and supporting visualization of market
+segments.
+- Contributed to the financial resilience of a multinational gas and electric
+firm during COVID-19 by managing weekly financial data analyses and
+transitioning reporting to a Tableau-based self-reporting system to track and
+mitigate financial risks.
+- Developed and refined pricing analytics tools for a major HVAC company to
+enable competitive pricing and forecast price realization down to the individual
+parts level, enhancing decision-making agility.
+Siemens PLM Software
+R&D Software Engineer Intern
+May 2017 - August 2017 (4 months)
+Cincinnati Area, KY
+• Developed Cloud Based Machine Learning RNN models (Tensorflow & Cloud
+Foundry), and Incorporated models into Siemens’ Internet of Things (IOT)
+platform. Models were implemented into Siemens’ predictive maintenance
+practice and optimized factory operational costs. 
+• Created OPCUA server & client (java & python), giving real-time sensor data
+that overlays machine using AR. 
+• Used RPi & Arduino to simulate machinery sensor data for uses in Machine
+Learning and cloud computing applications. 
+• Began work on image recognition Tensorflow models for use in part and
+machine recognition. 
+• Enhanced knowledge of project management and product design in software
+development, well-versed in application architecture in java and python. 
+Siemens Hackathon:
+• Led team of 3 in 24-hour hackathon. Created silent installer for Siemen’s
+PLM software using Docker. 
+ Page 2 of 4
+  
+• Created Docker image that eliminated need for internet and increased
+cross-compatibility and performance. Concept was recognized by upper-level
+executive board and was used in development of multiple PLM projects. 
+The Ohio State University Fisher College of Business
+Data Analytics Research Assistant
+September 2015 - May 2017 (1 year 9 months)
+Columbus, Ohio Area
+• Created research database through Python and VBA programming to
+compare business schools’ publications. Used fuzzy comparisons to scrape
+and match >15K professors to projects. Findings led to publication in Journal
+of Supply Chain Management.
+• Extensive use of python for data and scraping university website for faculty
+information. 
+Ayming (ex Alma Consulting Group & Lowendalmasaï)
+Consulting Intern
+May 2016 - August 2016 (4 months)
+Madrid Area, Spain
+• Developed dynamic internal forecasting model with over 20 variables,
+allowing management to greatly improve forecasting accuracy. 
+• Generated client profiles on European companies including various financial
+criteria to assist consultants with projects.
+• Accelerated projects by condensing complex English information sources for
+Spanish-speaking coworkers
+• Worked alongside consulting team analyzing European companies tax and
+R&D department to acquire tax incentives, and grants. 
+• Preformed extensive coding in VBA to help refine and streamline the
+company database
+Trane
+Account Manager
+May 2015 - August 2015 (4 months)
+Cincinnati Area
+• Developed computer UI to demonstrate cost savings over time with use of
+Trane systems and maintenance program. Gave sales team ability to easily
+quantify saving to over 1,000 customers. 
+• Presented findings to regional manager and helped create user manual for
+application. 
+ Page 3 of 4
+  
+• Managed accounts with over $100,000 in monthly sales. Problem solved to
+ensure that heating and cooling systems met varied demands and customer
+needs.
+• Enhanced my ability to take technical knowledge and convey it in an easy to
+understand format.
+Education
+The Ohio State University
+Associate’s Degree, Integrated Systems Engineering, Minor
+Business · (2013 - 2018)
+Georgia Institute of Technology
+Master's degree, Computer Science · (January 2021)
+ Page 4 of 4

@@ -17,19 +17,24 @@ const CONFIG = {
       mode: 'automatic', // Mode can be: 'automatic' or 'manual'
       automatic: {
         sortBy: 'stars', // Sort projects by 'stars' or 'updated'
-        limit: 8, // How many projects to display.
+        limit: 4, // How many projects to display.
         exclude: {
           forks: false, // Forked projects will not be displayed if set to true.
           projects: [
             'jamesbmour/FlutterChatAppTutorial',
             'jamesbmour/langchain-tutorials',
             'jamesbmour/cheatsheets',
+            'jamesbmour/James-Personal-Portfolio',
           ], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
         },
       },
       manual: {
         // Properties for manually specifying projects
-        projects: ['jamesbmour/FinGPT ', 'jamesbmour/finrl'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+        projects: [
+          'jamesbmour/FinGPT ',
+          'jamesbmour/finrl',
+          'jamesbmour/blog_tutorials',
+        ], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
       },
     },
     external: {
@@ -61,7 +66,7 @@ const CONFIG = {
     imageURL: '',
   },
   social: {
-    linkedin: 'www.linkedin.com/in/james-brendamour-4b1782112/',
+    linkedin: 'james-b-4b1782112',
     // mastodon: '',
     youtube: '', // example: 'pewdiepie'
     // dribbble: '',
@@ -102,7 +107,6 @@ const CONFIG = {
     'Tableau',
     'Power BI',
     'Java',
-
   ],
   experiences: [
     {
@@ -154,7 +158,7 @@ const CONFIG = {
   blog: {
     source: 'dev', // medium | dev
     username: 'jamesbmour', // to hide blog section, keep it empty
-    limit: 5, // How many articles to display. Max is 10.
+    limit: 6, // How many articles to display. Max is 10.
   },
   googleAnalytics: {
     id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
