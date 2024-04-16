@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "../Portfolio-Chat"
+		},
+		{
+			"path": "../pdf_chat"
 		}
 	],
 	"settings": {}
