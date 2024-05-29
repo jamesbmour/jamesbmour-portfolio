@@ -4,13 +4,16 @@ import GitProfile from './components/gitprofile.tsx';
 import { DevSupport } from '@react-buddy/ide-toolbox';
 import { ComponentPreviews, useInitial } from './dev';
 
-// @ts-ignore
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <DevSupport ComponentPreviews={ComponentPreviews}
-                useInitialHook={useInitial}
+    <DevSupport
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
+      ComponentPreviews={ComponentPreviews}
+      useInitialHook={useInitial}
     >
       <GitProfile config={CONFIG} />
-    </DevSupport>;
-  </React.StrictMode>
+    </DevSupport>
+    ;
+  </React.StrictMode>,
 );
