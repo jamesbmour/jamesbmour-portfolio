@@ -30,7 +30,7 @@ import ExternalProjectCard from './external-project-card';
 import BlogCard from './blog-card';
 import Footer from './footer';
 // import Chatbot from './chatbot';
-import Header from './header'; // Adjust the path as necessary
+// import Header from './header'; // Adjust the path as necessary
 import StreamlitApp from './streamlit-chat';
 
 /**
@@ -187,11 +187,11 @@ const GitProfile = ({ config }: { config: Config }) => {
   return (
     <HelmetProvider>
       <div className="fade-in h-screen">
-        <Header
-          onSelectTab={function (): void {
-            throw new Error('Function not implemented.');
-          }}
-        />{' '}
+        {/*<Header*/}
+        {/*  onSelectTab={function (): void {*/}
+        {/*    throw new Error('Function not implemented.');*/}
+        {/*  }}*/}
+        {/*/>{' '}*/}
         {/* Add the Header component here */}
         {error ? (
           <ErrorPage
