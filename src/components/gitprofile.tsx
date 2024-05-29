@@ -187,7 +187,9 @@ const GitProfile = ({ config }: { config: Config }) => {
   return (
     <HelmetProvider>
       <div className="fade-in h-screen">
-        <Header /> {/* Add the Header component here */}
+        <Header onSelectTab={function (tab: string): void {
+          throw new Error('Function not implemented.');
+        } } /> {/* Add the Header component here */}
         {error ? (
           <ErrorPage
             status={error.status}
@@ -204,11 +206,11 @@ const GitProfile = ({ config }: { config: Config }) => {
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 rounded-box">
                 <div className="col-span-1">
                   <div className="grid grid-cols-1 gap-6">
-                    <div className="card-body">
+                    {/* <div className="card-body">
                       <h3 className="text-2xl font-bold text-center">
                         This website is still under development
                       </h3>
-                    </div>
+                    </div> */}
                     {!sanitizedConfig.themeConfig.disableSwitch && (
                       <ThemeChanger
                         theme={theme}

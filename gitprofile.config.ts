@@ -243,14 +243,14 @@ const CONFIG = {
     },
   },
 
-  // Optional Footer. Supports plain text or HTML.
-  footer: `Made b James Brendamour 
-      class="text-primary" href="https://github.com/jamesbmour/jamesbrendamour.me"
-      target="_blank"
-      rel="noreferrer"
-    >GitProfile</>`,
+  // // Optional Footer. Supports plain text or HTML.
+  // footer: `Made b James Brendamour 
+  //     class="text-primary" href="https://github.com/jamesbmour/jamesbrendamour.me"
+  //     target="_blank"
+  //     rel="noreferrer"
+  //   >GitProfile</>`,
 
-  enablePWA: true,
+  // enablePWA: true,
 };
 
 export default CONFIG;
