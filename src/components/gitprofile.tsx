@@ -29,7 +29,7 @@ import GithubProjectCard from './github-project-card';
 import ExternalProjectCard from './external-project-card';
 import BlogCard from './blog-card';
 import Footer from './footer';
-import Chatbot from './chatbot';
+// import Chatbot from './chatbot';
 import Header from './header'; // Adjust the path as necessary
 import StreamlitApp from './streamlit-chat';
 
@@ -187,9 +187,12 @@ const GitProfile = ({ config }: { config: Config }) => {
   return (
     <HelmetProvider>
       <div className="fade-in h-screen">
-        <Header onSelectTab={function (tab: string): void {
-          throw new Error('Function not implemented.');
-        } } /> {/* Add the Header component here */}
+        <Header
+          onSelectTab={function (): void {
+            throw new Error('Function not implemented.');
+          }}
+        />{' '}
+        {/* Add the Header component here */}
         {error ? (
           <ErrorPage
             status={error.status}
