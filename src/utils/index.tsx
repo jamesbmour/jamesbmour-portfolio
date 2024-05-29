@@ -193,6 +193,8 @@ export const skeleton = ({
 export const setupHotjar = (hotjarConfig: SanitizedHotjar): void => {
   if (hotjarConfig?.id) {
     const snippetVersion = hotjarConfig?.snippetVersion || 6;
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     hotjar.initialize(parseInt(hotjarConfig.id), snippetVersion);
   }
 };
