@@ -68,7 +68,7 @@ const CONFIG = {
   social: {
     linkedin: 'james-b-4b1782112',
     // mastodon: '',
-    youtube: '', // example: 'pewdiepie'
+    youtube: 'justcodeit77', // example: 'pewdiepie'
     // dribbble: '',
     // behance: '',
     medium: '@jamesbrendamour7',
@@ -83,6 +83,8 @@ const CONFIG = {
   },
   skills: [
     'Python',
+    'Streamlit',
+    'Dash',
     'NLP',
     'RL',
     'Data Science',
@@ -150,8 +152,8 @@ const CONFIG = {
     {
       institution: 'Georgia Institute of Technology',
       degree: 'Masters of Science in Computer Science (Machine Learning)',
-      from: '2012',
-      to: '2014',
+      from: '2020',
+      to: '2024',
     },
   ],
   // Display articles from your medium or dev account. (Optional)

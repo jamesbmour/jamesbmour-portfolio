@@ -3,7 +3,7 @@ import {
   Category,
   Component,
   Variant,
-  Palette
+  Palette,
 } from '@react-buddy/ide-toolbox';
 
 export const PaletteTree = () => (
@@ -19,7 +19,5 @@ export const PaletteTree = () => (
 );
 
 export function ExampleLoaderComponent() {
-  return (
-    <Fragment>Loading...</Fragment>
-  );
+  return <Fragment>Loading...</Fragment>;
 }
