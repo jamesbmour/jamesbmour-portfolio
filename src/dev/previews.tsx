@@ -1,8 +1,8 @@
 import { ComponentPreview, Previews } from '@react-buddy/ide-toolbox';
 import { PaletteTree } from './palette';
-import BlogCard from '../components/blog-card';
 import { SanitizedBlog } from '../interfaces/sanitized-config.tsx';
 import AvatarCard from '../components/avatar-card';
+import { Profile } from '../interfaces/profile.tsx';
 
 interface ComponentPreviewsProps {
   blog: SanitizedBlog;
@@ -12,8 +12,7 @@ interface ComponentPreviewsProps {
 }
 
 const ComponentPreviews = ({
-  blog,
-  avatarRing,
+                             avatarRing,
   loading,
   profile,
 }: ComponentPreviewsProps) => {
