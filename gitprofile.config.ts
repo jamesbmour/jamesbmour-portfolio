@@ -31,7 +31,6 @@ const CONFIG = {
       manual: {
         // Properties for manually specifying projects
         projects: [
-          'jamesbmour/FinGPT ',
           'jamesbmour/finrl',
           'jamesbmour/blog_tutorials',
         ], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
@@ -101,7 +100,7 @@ const CONFIG = {
     'Node.js',
     'Nest.js',
     'MySQL',
-    'PostgreSQL',
+    'PostgresSQL',
     'Git',
     'Docker',
     'CSS',
@@ -167,7 +166,7 @@ const CONFIG = {
   },
   // Track visitor interaction and behavior. https://www.hotjar.com
   hotjar: {
-    id: '',
+    id: '5129603',
     snippetVersion: 6,
   },
   themeConfig: {
