@@ -3,12 +3,14 @@ import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 import CONFIG from './gitprofile.config';
 import { createHtmlPlugin } from 'vite-plugin-html';
+import mdx from '@mdx-js/rollup';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   base: CONFIG.base || '/',
   plugins: [
     react(),
+    mdx(),
     createHtmlPlugin({
       inject: {
         data: {
