@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { FALLBACK_IMAGE } from '../../constants';
 import { Profile } from '../../interfaces/profile';
 import { skeleton } from '../../utils';
@@ -26,8 +25,6 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
   avatarRing,
   resumeFileUrl,
 }): JSX.Element => {
-  const [showResumeContent, setShowResumeContent] = useState(false);
-
   return (
     <div className="shadow-lg card compact bg-base-100">
       <div className="grid py-8 place-items-center">
