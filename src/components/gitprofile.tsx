@@ -29,7 +29,8 @@ import GithubProjectCard from './github-project-card';
 import ExternalProjectCard from './external-project-card';
 import BlogCard from './blog-card';
 import Footer from './footer';
-import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+// import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+import { createChat } from '@n8n/chat';
 import '@n8n/chat/style.css';
 
 // import '../styles/chat.css'; // Import the chat CSS
@@ -65,6 +66,7 @@ const GitProfile = ({ config }: { config: Config }) => {
         footer: '',
         getStarted: 'New Conversation',
         inputPlaceholder: 'Type your question..',
+        closeButtonTooltip: 'Close Chat', // Required property
       },
     },
   });
