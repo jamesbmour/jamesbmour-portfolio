@@ -16,7 +16,7 @@ const CONFIG = {
       header: 'Projects',
       mode: 'automatic', // Mode can be: 'automatic' or 'manual'
       automatic: {
-        sortBy: 'stars', // Sort projects by 'stars' or 'updated'
+        sortBy: 'updated', // Sort projects by 'stars' or 'updated'
         limit: 4, // How many projects to display.
         exclude: {
           forks: false, // Forked projects will not be displayed if set to true.
@@ -30,10 +30,7 @@ const CONFIG = {
       },
       manual: {
         // Properties for manually specifying projects
-        projects: [
-          'jamesbmour/finrl',
-          'jamesbmour/blog_tutorials',
-        ], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+        projects: ['jamesbmour/finrl', 'jamesbmour/blog_tutorials'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
       },
     },
     external: {
@@ -41,12 +38,11 @@ const CONFIG = {
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
-          title: 'RL Research',
+          title: 'Multi-Agent Coordination in Overcooked: A RL Approach',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-          imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
+            'This paper addresses the Overcooked environment, a multi-agent challenge inspired by the game, where two AI chefs collaborate to efficiently deliver soups. By utilizing reward shaping and innovative strategies, the study demonstrates how teamwork and adaptive algorithms can tackle complex, dynamic tasks, providing insights into optimizing AI collaboration in time-sensitive scenarios.',
+          imageUrl: 'public/overcooked.jpg',
+          link: 'https://drive.google.com/file/d/1xzq6-yHNT9PSKmzCwEVLC3c_x7n-WGQv/view?usp=sharing',
         },
         {
           title: 'Document Intelligence',
@@ -65,7 +61,7 @@ const CONFIG = {
     imageURL: '',
   },
   social: {
-    linkedin: 'james-b-4b1782112',
+    linkedin: 'jamesbmour',
     // mastodon: '',
     youtube: 'justcodeit77', // example: 'pewdiepie'
     // dribbble: '',
@@ -73,12 +69,13 @@ const CONFIG = {
     medium: '@jamesbrendamour7',
     dev: 'jamesbmour',
     // stackoverflow: '', // example: '1/jeff-atwood'
-    website: 'www.jamesbrendamour.me',
+    website: 'www.jamesbmour.com',
     phone: '513-543-8687',
-    email: 'jamesbrendamour3@gmail.com',
+    email: 'James@bmours.com',
   },
   resume: {
-    fileUrl: './src/data/James-Brendamour-Resume.pdf', // Empty fileUrl will hide the `Download Resume` button.
+    fileUrl:
+      'https://drive.google.com/file/d/1-6aOoQLVlatLv3w_70qHEPEh16TUCBWR/view?usp=sharing', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'Python',
@@ -112,24 +109,24 @@ const CONFIG = {
   experiences: [
     {
       company: 'EY',
-      position: 'Technology Consultant',
-      from: 'September 2021',
-      to: 'Present',
-      companyLink: 'https://example.com',
+      position: 'AI & Automation Technology Consultant',
+      from: 'Sep 2018',
+      to: 'Aug 2022',
+      companyLink: 'https://www.ey.com/en_us',
     },
     {
       company: 'Freelance Consultant',
       position: 'Data Science & Machine Leaning Consultant',
-      from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
+      from: 'Aug 2022',
+      to: 'Present',
+      companyLink: '',
     },
     {
-      company: 'Seamens R&D',
-      position: 'Intern in Data Science & Machine Learning for AR & VR',
+      company: 'Siemens  R&D',
+      position: 'Intern in Data Science & Machine Learning',
       from: 'July 2019',
       to: 'August 2021',
-      companyLink: 'https://example.com',
+      companyLink: 'https://www.siemens.com/global/en.html',
     },
   ],
   certifications: [
@@ -145,13 +142,13 @@ const CONFIG = {
       institution: 'Ohio State University',
       degree: 'Bachelors of Science in Integrated Systems Engineering',
       minor: 'Minor in Business',
-      from: '2015',
-      to: '2019',
+      from: '2013',
+      to: '2018',
     },
     {
       institution: 'Georgia Institute of Technology',
       degree: 'Masters of Science in Computer Science (Machine Learning)',
-      from: '2020',
+      from: '2021',
       to: '2024',
     },
   ],
@@ -159,7 +156,7 @@ const CONFIG = {
   blog: {
     source: 'dev', // medium | dev
     username: 'jamesbmour', // to hide blog section, keep it empty
-    limit: 6, // How many articles to display. Max is 10.
+    limit: 4, // How many articles to display. Max is 10.
   },
   googleAnalytics: {
     id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
@@ -245,7 +242,7 @@ const CONFIG = {
   },
 
   // // Optional Footer. Supports plain text or HTML.
-  // footer: `Made b James Brendamour 
+  // footer: `Made b James Brendamour
   //     class="text-primary" href="https://github.com/jamesbmour/jamesbrendamour.me"
   //     target="_blank"
   //     rel="noreferrer"
