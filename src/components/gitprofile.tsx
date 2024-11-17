@@ -29,10 +29,14 @@ import GithubProjectCard from './github-project-card';
 import ExternalProjectCard from './external-project-card';
 import BlogCard from './blog-card';
 import Footer from './footer';
+import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+// import '../styles/chat.css'; // Import the chat CSS
+import './variables.css';
 // import Chatbot from './chatbot';
 // import Header from './header'; // Adjust the path as necessary
-import StreamlitApp from './streamlit-chat';
-import ResumeViewer from './ResumeViewer/ResumeViewer'; // Adjust the path as necessary
+// import ResumeViewer from './ResumeViewer/ResumeViewer'; // Adjust the path as necessary
+// import '@n8n/chat/style.css';
+// import { createChat } from '@n8n/chat';
 
 /**
  * Renders the GitProfile component.
@@ -44,6 +48,25 @@ const GitProfile = ({ config }: { config: Config }) => {
   const [sanitizedConfig] = useState<SanitizedConfig | Record<string, never>>(
     getSanitizedConfig(config),
   );
+  createChat({
+    webhookUrl:
+      'https://n8n.jdb7.us/webhook/f1c26d49-a173-45d6-a871-5b017074f7c1/chat',
+
+    initialMessages: [
+      'Hi there! 👋 My name is James. What would you like to know about me?',
+      'E.g. What work have you done with LLMs.',
+    ],
+    i18n: {
+      en: {
+        title: 'Hi Chat! 👋',
+        subtitle: 'Chat with me resume, Experiences, and projects.',
+        footer: '',
+        getStarted: 'New Conversation',
+        inputPlaceholder: 'Type your question..',
+      },
+    },
+  });
+
   const [theme, setTheme] = useState<string>(DEFAULT_THEMES[0]);
   const [error, setError] = useState<CustomError | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
@@ -188,6 +211,11 @@ const GitProfile = ({ config }: { config: Config }) => {
   return (
     <HelmetProvider>
       <div className="h-screen fade-in">
+        <link
+          href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
+          rel="stylesheet"
+        />
+
         {/*<Header*/}
         {/*  onSelectTab={function (): void {*/}
         {/*    throw new Error('Function not implemented.');*/}
@@ -295,8 +323,7 @@ const GitProfile = ({ config }: { config: Config }) => {
                         googleAnalyticId={sanitizedConfig.googleAnalytics.id}
                       />
                     )}
-                                {/* <ResumeViewer /> */}
-
+                    {/* <ResumeViewer /> */}
                   </div>
                 </div>
               </div>
@@ -312,7 +339,6 @@ const GitProfile = ({ config }: { config: Config }) => {
             )}
             {/* <Chatbot /> */}
             {/* <StreamlitApp /> */}
-
           </>
         )}
       </div>

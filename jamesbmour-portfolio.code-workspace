@@ -7,5 +7,10 @@
 			"path": "../mountmour.com"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"editor.formatOnPaste": true,
+		"editor.formatOnSave": true,
+		"editor.formatOnSaveMode": "file",
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
 }
