@@ -32,6 +32,7 @@ import Footer from './footer';
 // import Chatbot from './chatbot';
 // import Header from './header'; // Adjust the path as necessary
 import StreamlitApp from './streamlit-chat';
+import ResumeViewer from './ResumeViewer/ResumeViewer'; // Adjust the path as necessary
 
 /**
  * Renders the GitProfile component.
@@ -186,7 +187,7 @@ const GitProfile = ({ config }: { config: Config }) => {
 
   return (
     <HelmetProvider>
-      <div className="fade-in h-screen">
+      <div className="h-screen fade-in">
         {/*<Header*/}
         {/*  onSelectTab={function (): void {*/}
         {/*    throw new Error('Function not implemented.');*/}
@@ -206,7 +207,7 @@ const GitProfile = ({ config }: { config: Config }) => {
               appliedTheme={theme}
             />
             <div className={`p-4 lg:p-10 min-h-full ${BG_COLOR}`}>
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 rounded-box">
+              <div className="grid grid-cols-1 gap-6 lg:grid-cols-3 rounded-box">
                 <div className="col-span-1">
                   <div className="grid grid-cols-1 gap-6">
                     {/* <div className="card-body">
@@ -262,7 +263,7 @@ const GitProfile = ({ config }: { config: Config }) => {
                     )}
                   </div>
                 </div>
-                <div className="lg:col-span-2 col-span-1">
+                <div className="col-span-1 lg:col-span-2">
                   <div className="grid grid-cols-1 gap-6">
                     {/* add expericance card */}
                     {sanitizedConfig.blog.display && (
@@ -294,6 +295,8 @@ const GitProfile = ({ config }: { config: Config }) => {
                         googleAnalyticId={sanitizedConfig.googleAnalytics.id}
                       />
                     )}
+                                {/* <ResumeViewer /> */}
+
                   </div>
                 </div>
               </div>
@@ -302,13 +305,14 @@ const GitProfile = ({ config }: { config: Config }) => {
               <footer
                 className={`p-4 footer ${BG_COLOR} text-base-content footer-center`}
               >
-                <div className="card compact bg-base-100 shadow">
+                <div className="shadow card compact bg-base-100">
                   <Footer content={sanitizedConfig.footer} loading={loading} />
                 </div>
               </footer>
             )}
             {/* <Chatbot /> */}
-            <StreamlitApp />
+            {/* <StreamlitApp /> */}
+
           </>
         )}
       </div>

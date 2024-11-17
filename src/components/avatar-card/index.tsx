@@ -1,7 +1,9 @@
+import React, { useState } from 'react';
 import { FALLBACK_IMAGE } from '../../constants';
 import { Profile } from '../../interfaces/profile';
 import { skeleton } from '../../utils';
 import LazyImage from '../lazy-image';
+// import ResumeContent from '../resume/resume.mdx';
 
 interface AvatarCardProps {
   profile: Profile | null;
@@ -24,12 +26,14 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
   avatarRing,
   resumeFileUrl,
 }): JSX.Element => {
+  const [showResumeContent, setShowResumeContent] = useState(false);
+
   return (
-    <div className="card shadow-lg compact bg-base-100">
-      <div className="grid place-items-center py-8">
+    <div className="shadow-lg card compact bg-base-100">
+      <div className="grid py-8 place-items-center">
         {loading || !profile ? (
           <div className="avatar opacity-90">
-            <div className="mb-8 rounded-full w-32 h-32">
+            <div className="w-32 h-32 mb-8 rounded-full">
               {skeleton({
                 widthCls: 'w-full',
                 heightCls: 'h-full',
@@ -60,8 +64,8 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
             </div>
           </div>
         )}
-        <div className="text-center mx-auto px-8">
-          <h5 className="font-bold text-2xl">
+        <div className="px-8 mx-auto text-center">
+          <h5 className="text-2xl font-bold">
             {loading || !profile ? (
               skeleton({ widthCls: 'w-48', heightCls: 'h-8' })
             ) : (
@@ -70,7 +74,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
               </span>
             )}
           </h5>
-          <div className="mt-3 text-base-content text-opacity-60 font-mono">
+          <div className="mt-3 font-mono text-base-content text-opacity-60">
             {loading || !profile
               ? skeleton({ widthCls: 'w-48', heightCls: 'h-5' })
               : profile.bio}
@@ -81,7 +85,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
             <a
               href={resumeFileUrl}
               target="_blank"
-              className="btn btn-outline btn-sm text-xs opacity-50"
+              className="text-xs opacity-50 btn btn-outline btn-sm"
               download
               rel="noreferrer"
             >
@@ -90,16 +94,28 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
           )}
           {/* Add Contact Button */}
           <button
-            className="btn btn-outline btn-sm text-xs opacity-50"
+            className="text-xs opacity-50 btn btn-outline btn-sm"
             onClick={() => {
               // Implement contact download or display functionality here
               alert('Contact information added to your address book!');
-              // add contact to address bo
+              // add contact to address book
             }}
           >
             Add Contact
           </button>
+          {/* View Resume Button */}
+          {/* <button
+            className="text-xs opacity-50 btn btn-outline btn-sm"
+            onClick={() => setShowResumeContent(!showResumeContent)}
+          >
+            {showResumeContent ? 'Hide Resume' : 'View Resume'}
+          </button> */}
         </div>
+        {/* {showResumeContent && (
+          <div className="mt-4">
+            <ResumeContent />
+          </div>
+        )} */}
       </div>
     </div>
   );

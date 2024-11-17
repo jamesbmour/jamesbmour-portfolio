@@ -10,7 +10,7 @@ export default defineConfig({
   base: CONFIG.base || '/',
   plugins: [
     react(),
-    mdx(),
+    mdx({}),
     createHtmlPlugin({
       inject: {
         data: {
