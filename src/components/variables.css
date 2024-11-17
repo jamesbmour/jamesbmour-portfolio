@@ -3,7 +3,7 @@
   --chat--color-primary: #1c4e80;
   --chat--color-primary-shade-50: #1c4e80;
   --chat--color-primary-shade-100: #1c4e80;
-  --chat--color-secondary: #20b69e;
+  --chat--color-secondary: #1c4e80;
   --chat--color-secondary-shade-50: #1ca08a;
   --chat--color-white: #ffffff;
   --chat--color-light: #f2f4f8;
@@ -41,7 +41,7 @@
   --chat--message--bot--color: var(--chat--color-dark);
   --chat--message--bot--border: none;
   --chat--message--user--background: var(--chat--color-secondary);
-  --chat--message--user--color: var(--chat--color-dark);
+  --chat--message--user--color: var(--chat--color-light);
   --chat--message--user--border: none;
   --chat--message--pre--background: rgba(0, 0, 0, 0.05);
 
