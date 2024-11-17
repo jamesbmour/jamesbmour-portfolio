@@ -30,6 +30,8 @@ import ExternalProjectCard from './external-project-card';
 import BlogCard from './blog-card';
 import Footer from './footer';
 import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+import '@n8n/chat/style.css';
+
 // import '../styles/chat.css'; // Import the chat CSS
 import './variables.css';
 // import Chatbot from './chatbot';
@@ -211,11 +213,12 @@ const GitProfile = ({ config }: { config: Config }) => {
   return (
     <HelmetProvider>
       <div className="h-screen fade-in">
-        <link
+        {/* <link
           href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
           rel="stylesheet"
-        />
-
+        /> */}
+        ;{/* add style sheet css  */}
+        <script>{/* Add any necessary scripts or styles here */}</script>
         {/*<Header*/}
         {/*  onSelectTab={function (): void {*/}
         {/*    throw new Error('Function not implemented.');*/}
