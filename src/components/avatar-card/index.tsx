@@ -98,7 +98,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
               // add contact to address book
             }}
           >
-            Add Contact
+            Contact
           </button>
           {/* View Resume Button */}
           {/* <button
