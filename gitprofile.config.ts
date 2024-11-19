@@ -41,7 +41,7 @@ const CONFIG = {
           title: 'Multi-Agent Coordination in Overcooked: A RL Approach',
           description:
             'This paper addresses the Overcooked environment, a multi-agent challenge inspired by the game, where two AI chefs collaborate to efficiently deliver soups. By utilizing reward shaping and innovative strategies, the study demonstrates how teamwork and adaptive algorithms can tackle complex, dynamic tasks, providing insights into optimizing AI collaboration in time-sensitive scenarios.',
-          imageUrl: 'public/overcooked.jpg',
+          imageUrl: 'overcooked.jpg',
           link: '',
         },
         {
