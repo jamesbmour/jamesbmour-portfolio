@@ -288,12 +288,12 @@ const GitProfile = ({ config }: { config: Config }) => {
                       />
                     )}
 
-                    {sanitizedConfig.certifications.length !== 0 && (
+                    {/* {sanitizedConfig.certifications.length !== 0 && (
                       <CertificationCard
                         loading={loading}
                         certifications={sanitizedConfig.certifications}
                       />
-                    )}
+                    )} */}
                   </div>
                 </div>
                 <div className="col-span-1 lg:col-span-3">

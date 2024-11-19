@@ -66,7 +66,7 @@ const CONFIG = {
     youtube: 'justcodeit77', // example: 'pewdiepie'
     // dribbble: '',
     // behance: '',
-    medium: '@jamesbrendamour7',
+    // medium: '@jamesbrendamour7',
     dev: 'jamesbmour',
     // stackoverflow: '', // example: '1/jeff-atwood'
     website: 'jamesbmour.com',

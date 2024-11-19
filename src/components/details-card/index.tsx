@@ -68,9 +68,9 @@ const ListItem: React.FC<{
       href={link}
       target="_blank"
       rel="noreferrer"
-      className="flex justify-start py-2 px-1 items-center"
+      className="flex items-center justify-start px-1 py-2"
     >
-      <div className="flex-grow font-medium gap-2 flex items-center my-1">
+      <div className="flex items-center flex-grow gap-2 my-1 font-medium">
         {icon} {title}
       </div>
       <div
@@ -115,7 +115,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
   };
 
   return (
-    <div className="card shadow-lg compact bg-base-100">
+    <div className="shadow-lg card compact bg-base-100">
       <div className="card-body">
         <div className="text-base-content text-opacity-60">
           {loading || !profile ? (

@@ -40,8 +40,8 @@ const ThemeChanger = ({
   };
 
   return (
-    <div className="card overflow-visible shadow-lg compact bg-base-100">
-      <div className="flex-row items-center space-x-4 flex pl-6 pr-2 py-4">
+    <div className="overflow-visible shadow-lg card compact bg-base-100">
+      <div className="flex flex-row items-center py-4 pl-6 pr-2 space-x-4">
         <div className="flex-1">
           <h5 className="card-title">
             {loading ? (
@@ -54,7 +54,7 @@ const ThemeChanger = ({
               <span className="text-base-content opacity-70">Theme</span>
             )}
           </h5>
-          <span className="text-base-content text-opacity-40 capitalize text-sm">
+          <span className="text-sm capitalize text-base-content text-opacity-40">
             {loading
               ? skeleton({ widthCls: 'w-16', heightCls: 'h-5' })
               : theme === themeConfig.defaultTheme
@@ -73,10 +73,10 @@ const ThemeChanger = ({
             <div title="Change Theme" className="dropdown dropdown-end">
               <div
                 tabIndex={0}
-                className="btn btn-ghost m-1 normal-case opacity-50 text-base-content"
+                className="m-1 normal-case opacity-50 btn btn-ghost text-base-content"
               >
                 <AiOutlineControl className="inline-block w-5 h-5 stroke-current md:mr-2" />
-                <span className="hidden md:inline">Change Theme</span>
+                <span className="hidden md:inline">Theme</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 1792 1792"
@@ -87,7 +87,7 @@ const ThemeChanger = ({
               </div>
               <div
                 tabIndex={0}
-                className="mt-16 overflow-y-auto shadow-2xl top-px dropdown-content max-h-96 w-52 rounded-lg bg-base-200 text-base-content z-10"
+                className="z-10 mt-16 overflow-y-auto rounded-lg shadow-2xl top-px dropdown-content max-h-96 w-52 bg-base-200 text-base-content"
               >
                 <ul className="p-4 menu compact">
                   {[
@@ -102,7 +102,7 @@ const ThemeChanger = ({
                         onClick={(e) => changeTheme(e, item)}
                         className={`${theme === item ? 'active' : ''}`}
                       >
-                        <span className="opacity-60 capitalize">
+                        <span className="capitalize opacity-60">
                           {item === themeConfig.defaultTheme ? 'Default' : item}
                         </span>
                       </a>
