@@ -38,19 +38,20 @@ const CONFIG = {
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
-          title: 'Multi-Agent Coordination in Overcooked: A RL Approach',
+          title:
+            'Cooking Up Coordination: PPO for Multi-Agent Systems in Overcooked',
           description:
-            'This paper addresses the Overcooked environment, a multi-agent challenge inspired by the game, where two AI chefs collaborate to efficiently deliver soups. By utilizing reward shaping and innovative strategies, the study demonstrates how teamwork and adaptive algorithms can tackle complex, dynamic tasks, providing insights into optimizing AI collaboration in time-sensitive scenarios.',
+            'Paper explores the application of PPO in the Overcooked environment to study multi-agent reinforcement learning. By analyzing cooperative strategies, reward shaping, and performance across diverse kitchen layouts, the paper highlights the balance between individual and collective goals in complex, time-constrained tasks.',
           imageUrl: 'overcooked.jpg',
-          link: '',
+          link: 'https://drive.google.com/file/d/116S1Ygc8JWr-wSXDQw8AxZtKlL-2TtE6/view?usp=sharing',
         },
         {
-          title: 'Document Intelligence',
+          title:
+            "Optimizing DQN Performance in OpenAI Gym's Lunar Lander: A Comprehensive Hyperparameter Study",
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-          imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
+            'A Deep Q-Network (DQN) implementation for the Lunar Lander problem is analyzed through extensive hyperparameter experimentation to optimize performance and training efficiency.',
+          imageUrl: 'Lunar_Lander.webp',
+          link: 'https://drive.google.com/file/d/1175UUPUs4UZXSWLkgxyP1uNuPEkebHYx/view?usp=sharing',
         },
       ],
     },

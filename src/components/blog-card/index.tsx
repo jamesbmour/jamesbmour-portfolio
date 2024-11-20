@@ -38,10 +38,10 @@ const BlogCard = ({
     const array = [];
     for (let index = 0; index < blog.limit; index++) {
       array.push(
-        <div className="card shadow-lg compact bg-base-100" key={index}>
-          <div className="p-8 h-full w-full">
-            <div className="flex items-center flex-col md:flex-row">
-              <div className="avatar mb-5 md:mb-0">
+        <div className="shadow-lg card compact bg-base-100" key={index}>
+          <div className="w-full h-full p-8">
+            <div className="flex flex-col items-center md:flex-row">
+              <div className="mb-5 avatar md:mb-0">
                 <div className="w-24 h-24 mask mask-squircle">
                   {skeleton({
                     widthCls: 'w-full',
@@ -72,7 +72,7 @@ const BlogCard = ({
                         className: 'mx-auto md:mx-0',
                       })}
                     </div>
-                    <div className="mt-4 flex items-center flex-wrap justify-center md:justify-start">
+                    <div className="flex flex-wrap items-center justify-center mt-4 md:justify-start">
                       {skeleton({
                         widthCls: 'w-32',
                         heightCls: 'h-4',
@@ -95,7 +95,7 @@ const BlogCard = ({
     return articles && articles.length ? (
       articles.slice(0, blog.limit).map((article, index) => (
         <a
-          className="card shadow-lg compact bg-base-100 cursor-pointer"
+          className="shadow-lg cursor-pointer card compact bg-base-100"
           key={index}
           href={article.link}
           onClick={(e) => {
@@ -114,9 +114,9 @@ const BlogCard = ({
             window?.open(article.link, '_blank');
           }}
         >
-          <div className="p-8 h-full w-full">
-            <div className="flex items-center flex-col md:flex-row">
-              <div className="avatar mb-5 md:mb-0 opacity-90">
+          <div className="w-full h-full p-8">
+            <div className="flex flex-col items-center md:flex-row">
+              <div className="mb-5 avatar md:mb-0 opacity-90">
                 <div className="w-24 h-24 mask mask-squircle">
                   <LazyImage
                     src={article.thumbnail}
@@ -131,22 +131,22 @@ const BlogCard = ({
               </div>
               <div className="w-full">
                 <div className="flex items-start px-4">
-                  <div className="text-center md:text-left w-full">
+                  <div className="w-full text-center md:text-left">
                     <h2 className="font-semibold text-base-content opacity-60">
                       {article.title}
                     </h2>
-                    <p className="text-base-content opacity-50 text-xs">
+                    <p className="text-xs opacity-50 text-base-content">
                       {formatDistance(article.publishedAt, new Date(), {
                         addSuffix: true,
                       })}
                     </p>
-                    <p className="mt-3 text-base-content text-opacity-60 text-sm">
+                    <p className="mt-3 text-sm text-base-content text-opacity-60">
                       {article.description}
                     </p>
-                    <div className="mt-4 flex items-center flex-wrap justify-center md:justify-start">
+                    <div className="flex flex-wrap items-center justify-center mt-4 md:justify-start">
                       {article.categories.map((category, index2) => (
                         <div
-                          className="py-2 px-4 text-xs leading-3 rounded-full bg-base-300 mr-1 mb-1 opacity-50 text-base-content"
+                          className="px-4 py-2 mb-1 mr-1 text-xs leading-3 rounded-full opacity-50 bg-base-300 text-base-content"
                           key={index2}
                         >
                           #{category}
@@ -161,8 +161,8 @@ const BlogCard = ({
         </a>
       ))
     ) : (
-      <div className="text-center mb-6">
-        <AiOutlineContainer className="mx-auto h-12 w-12 opacity-30" />
+      <div className="mb-6 text-center">
+        <AiOutlineContainer className="w-12 h-12 mx-auto opacity-30" />
         <p className="mt-1 text-sm opacity-50 text-base-content">
           No recent post
         </p>
@@ -172,7 +172,9 @@ const BlogCard = ({
 
   return (
     <div className="col-span-1 lg:col-span-2">
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        {' '}
+        {/* Updated here */}
         <div className="col-span-2">
           <div
             className={`card compact bg-base-100 ${
@@ -194,7 +196,9 @@ const BlogCard = ({
                 </h5>
               </div>
               <div className="col-span-2">
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                  {' '}
+                  {/* Updated here */}
                   {loading || !articles ? renderSkeleton() : renderArticles()}
                 </div>
               </div>
