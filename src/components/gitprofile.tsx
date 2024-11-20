@@ -32,6 +32,7 @@ import Footer from './footer';
 // import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 import { createChat } from '@n8n/chat';
 import '@n8n/chat/style.css';
+import Chatbot from './chatbot';
 
 // import '../styles/chat.css'; // Import the chat CSS
 import './variables.css';
@@ -51,25 +52,25 @@ const GitProfile = ({ config }: { config: Config }) => {
   const [sanitizedConfig] = useState<SanitizedConfig | Record<string, never>>(
     getSanitizedConfig(config),
   );
-  createChat({
-    webhookUrl:
-      'https://n8n.jdb7.us/webhook/f1c26d49-a173-45d6-a871-5b017074f7c1/chat',
+  // createChat({
+  //   webhookUrl:
+  //     'https://n8n.jdb7.us/webhook/f1c26d49-a173-45d6-a871-5b017074f7c1/chat',
 
-    initialMessages: [
-      'Hi there! 👋 My name is James. What would you like to know about me?',
-      'E.g. What work have you done with LLMs.',
-    ],
-    i18n: {
-      en: {
-        title: 'Hi Chat! 👋',
-        subtitle: 'Chat with me resume, Experiences, and projects.',
-        footer: '',
-        getStarted: 'New Conversation',
-        inputPlaceholder: 'Type your question..',
-        closeButtonTooltip: 'Close Chat', // Required property
-      },
-    },
-  });
+  //   initialMessages: [
+  //     'Hi there! 👋 My name is James. What would you like to know about me?',
+  //     'E.g. What work have you done with LLMs.',
+  //   ],
+  //   i18n: {
+  //     en: {
+  //       title: 'Hi Chat! 👋',
+  //       subtitle: 'Chat with me resume, Experiences, and projects.',
+  //       footer: '',
+  //       getStarted: 'New Conversation',
+  //       inputPlaceholder: 'Type your question..',
+  //       closeButtonTooltip: 'Close Chat', // Required property
+  //     },
+  //   },
+  // });
 
   const [theme, setTheme] = useState<string>(DEFAULT_THEMES[0]);
   const [error, setError] = useState<CustomError | null>(null);
@@ -342,6 +343,7 @@ const GitProfile = ({ config }: { config: Config }) => {
                 </div>
               </footer>
             )}
+            <Chatbot />
             {/* <Chatbot /> */}
             {/* <StreamlitApp /> */}
           </>
