@@ -30,7 +30,7 @@ import ExternalProjectCard from './external-project-card';
 import BlogCard from './blog-card';
 import Footer from './footer';
 // import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-import { createChat } from '@n8n/chat';
+// import { createChat } from '@n8n/chat';
 import '@n8n/chat/style.css';
 import Chatbot from './chatbot';
 
