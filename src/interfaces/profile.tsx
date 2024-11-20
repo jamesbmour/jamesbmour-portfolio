@@ -4,4 +4,9 @@ export interface Profile {
   bio?: string;
   location?: string;
   company?: string;
+  contact?: {
+    email?: string;
+    phone?: string;
+    linkedin?: string;
+  };
 }

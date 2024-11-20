@@ -2,6 +2,9 @@ import { FALLBACK_IMAGE } from '../../constants';
 import { Profile } from '../../interfaces/profile';
 import { skeleton } from '../../utils';
 import LazyImage from '../lazy-image';
+import { useState } from 'react';
+import ContactModal from './contact-modal';
+
 // import ResumeContent from '../resume/resume.mdx';
 
 interface AvatarCardProps {
@@ -25,6 +28,8 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
   avatarRing,
   resumeFileUrl,
 }): JSX.Element => {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+
   return (
     <div className="shadow-lg card compact bg-base-100">
       <div className="grid py-8 place-items-center">
@@ -92,28 +97,19 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
           {/* Add Contact Button */}
           <button
             className="text-xs opacity-50 btn btn-outline btn-sm"
-            onClick={() => {
-              // Implement contact download or display functionality here
-              alert('Contact information added to your address book!');
-              // add contact to address book
-            }}
+            onClick={() => setIsContactModalOpen(true)}
           >
             Contact
           </button>
-          {/* View Resume Button */}
-          {/* <button
-            className="text-xs opacity-50 btn btn-outline btn-sm"
-            onClick={() => setShowResumeContent(!showResumeContent)}
-          >
-            {showResumeContent ? 'Hide Resume' : 'View Resume'}
-          </button> */}
         </div>
-        {/* {showResumeContent && (
-          <div className="mt-4">
-            <ResumeContent />
-          </div>
-        )} */}
       </div>
+      {profile && (
+        <ContactModal
+          isOpen={isContactModalOpen}
+          onClose={() => setIsContactModalOpen(false)}
+          profile={profile}
+        />
+      )}
     </div>
   );
 };
