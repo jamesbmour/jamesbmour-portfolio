@@ -16,7 +16,7 @@ const Chatbot = () => {
             'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
         },
         chatWindow: {
-          welcomeMessage: 'Hello! This is custom welcome message',
+          welcomeMessage: 'Hello! Chat with James Brendamour Resume',
           backgroundColor: '#ffffff',
           height: 700,
           width: 400,
