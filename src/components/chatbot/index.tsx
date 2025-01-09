@@ -4,7 +4,7 @@ const Chatbot = () => {
   return (
     <BubbleChat
       chatflowid="e2b4942e-e94c-423e-9483-33f13d9496f4"
-      apiHost="https://flowise.jdb7.us"
+      apiHost="https://flowise.jb7.me"
       theme={{
         button: {
           backgroundColor: '#1c4976',
