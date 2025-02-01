@@ -4,6 +4,7 @@ import GitProfile from './components/gitprofile.tsx';
 import { DevSupport } from '@react-buddy/ide-toolbox';
 import { ComponentPreviews, useInitial } from './dev';
 
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <DevSupport

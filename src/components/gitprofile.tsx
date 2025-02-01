@@ -36,6 +36,7 @@ import Chatbot from './chatbot';
 
 // import '../styles/chat.css'; // Import the chat CSS
 import './variables.css';
+
 // import Chatbot from './chatbot';
 // import Header from './header'; // Adjust the path as necessary
 // import ResumeViewer from './ResumeViewer/ResumeViewer'; // Adjust the path as necessary
@@ -90,10 +91,9 @@ const GitProfile = ({ config }: { config: Config }) => {
             .map((project) => `+-repo:${project}`)
             .join('');
 
-        const query = `user:${
-          sanitizedConfig.github.username
-        }+fork:${!sanitizedConfig.projects.github.automatic.exclude
-          .forks}${excludeRepo}`;
+        const query = `user:${sanitizedConfig.github.username
+          }+fork:${!sanitizedConfig.projects.github.automatic.exclude
+            .forks}${excludeRepo}`;
         const url = `https://api.github.com/search/repositories?q=${query}&sort=${sanitizedConfig.projects.github.automatic.sortBy}&per_page=${sanitizedConfig.projects.github.automatic.limit}&type=Repositories`;
 
         const repoResponse = await axios.get(url, {
@@ -216,6 +216,7 @@ const GitProfile = ({ config }: { config: Config }) => {
   return (
     <HelmetProvider>
       <div className="h-screen fade-in">
+
         {/* <link
           href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
           rel="stylesheet"
@@ -320,15 +321,15 @@ const GitProfile = ({ config }: { config: Config }) => {
 
                     {sanitizedConfig.projects.external.projects.length !==
                       0 && (
-                      <ExternalProjectCard
-                        loading={loading}
-                        header={sanitizedConfig.projects.external.header}
-                        externalProjects={
-                          sanitizedConfig.projects.external.projects
-                        }
-                        googleAnalyticId={sanitizedConfig.googleAnalytics.id}
-                      />
-                    )}
+                        <ExternalProjectCard
+                          loading={loading}
+                          header={sanitizedConfig.projects.external.header}
+                          externalProjects={
+                            sanitizedConfig.projects.external.projects
+                          }
+                          googleAnalyticId={sanitizedConfig.googleAnalytics.id}
+                        />
+                      )}
                     {/* <ResumeViewer /> */}
                   </div>
                 </div>

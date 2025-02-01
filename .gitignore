@@ -94,3 +94,4 @@ typings/
 ChatFiles/
 
 dist/
+.DS_Store
