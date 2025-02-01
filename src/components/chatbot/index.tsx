@@ -8,12 +8,13 @@ const Chatbot = () => {
       theme={{
         button: {
           backgroundColor: '#1c4976',
+
           right: 20,
           bottom: 20,
-          size: 'medium',
+          size: 'large',
           iconColor: 'white',
           customIconSrc:
-            'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+            'https://cdn-icons-png.flaticon.com/512/13330/13330989.png',
         },
         chatWindow: {
           welcomeMessage: 'Hello! Chat with James Brendamour Resume',
