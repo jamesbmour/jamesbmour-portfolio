@@ -6290,6 +6290,7 @@
         "npm:@types/react@^18.2.78",
         "npm:@typescript-eslint/eslint-plugin@^6.21.0",
         "npm:@typescript-eslint/parser@^6.21.0",
+        "npm:@vercel/analytics@^1.4.1",
         "npm:@vitejs/plugin-react@^4.2.1",
         "npm:autoprefixer@^10.4.19",
         "npm:axios@^1.6.8",
