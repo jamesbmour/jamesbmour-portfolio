@@ -14,6 +14,7 @@ PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME", "portfolio-chat")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
+
 def ingest_data():
     if not PINECONE_API_KEY or not OPENAI_API_KEY:
         print("Error: PINECONE_API_KEY and OPENAI_API_KEY must be set in .env")
@@ -30,17 +31,14 @@ def ingest_data():
             name=PINECONE_INDEX_NAME,
             dimension=1536,
             metric="cosine",
-            spec=ServerlessSpec(
-                cloud="aws",
-                region="us-east-1"
-            )
+            spec=ServerlessSpec(cloud="aws", region="us-east-1"),
         )
         while not pc.describe_index(PINECONE_INDEX_NAME).status["ready"]:
             time.sleep(1)
 
     print("Loading documents...")
     documents = []
-    
+
     # Load Recume
     resume_path = "./James-Brendamour-Resume.pdf"
     if os.path.exists(resume_path):
@@ -71,14 +69,13 @@ def ingest_data():
     # Embed and store
     print("Embedding and storing in Pinecone...")
     embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
-    
+
     PineconeVectorStore.from_documents(
-        documents=splits,
-        embedding=embeddings,
-        index_name=PINECONE_INDEX_NAME
+        documents=splits, embedding=embeddings, index_name=PINECONE_INDEX_NAME
     )
-    
+
     print("Ingestion complete!")
+
 
 if __name__ == "__main__":
     ingest_data()
