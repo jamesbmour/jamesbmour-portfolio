@@ -33,6 +33,7 @@ import Footer from './footer';
 // import { createChat } from '@n8n/chat';
 // import '@n8n/chat/style.css';
 import Chatbot from './chatbot';
+import LatestYoutube from './latest-youtube';
 
 // import '../styles/chat.css'; // Import the chat CSS
 import './variables.css';
@@ -257,6 +258,9 @@ const GitProfile = ({ config }: { config: Config }) => {
                         loading={loading}
                         themeConfig={sanitizedConfig.themeConfig}
                       />
+                    )}
+                    {sanitizedConfig.social.youtube && (
+                      <LatestYoutube channelId="UCg5Reo1UiJHniv9KFGkRIPg" />
                     )}
                     <AvatarCard
                       profile={profile}
