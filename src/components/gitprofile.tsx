@@ -259,9 +259,6 @@ const GitProfile = ({ config }: { config: Config }) => {
                         themeConfig={sanitizedConfig.themeConfig}
                       />
                     )}
-                    {sanitizedConfig.social.youtube && (
-                      <LatestYoutube channelId="UCg5Reo1UiJHniv9KFGkRIPg" />
-                    )}
                     <AvatarCard
                       profile={profile}
                       loading={loading}
@@ -305,6 +302,9 @@ const GitProfile = ({ config }: { config: Config }) => {
                 <div className="col-span-1 lg:col-span-3">
                   <div className="grid grid-cols-1 gap-6">
                     {/* add expericance card */}
+                    {sanitizedConfig.social.youtube && (
+                      <LatestYoutube channelId="UCg5Reo1UiJHniv9KFGkRIPg" />
+                    )}
                     {sanitizedConfig.blog.display && (
                       <BlogCard
                         loading={loading}
