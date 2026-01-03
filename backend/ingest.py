@@ -40,7 +40,7 @@ def ingest_data():
     documents = []
 
     # Load Recume
-    resume_path = "./James-Brendamour-Resume.pdf"
+    resume_path = "/Users/james/Library/CloudStorage/Dropbox/GitHub/jamesbmour-portfolio/backend/James-Brendamour-Resume.pdf"
     if os.path.exists(resume_path):
         print(f"Loading {resume_path}...")
         loader = PyPDFLoader(resume_path)
