@@ -8,6 +8,7 @@ interface Video {
   thumbnail: string;
   link: string;
   pubDate: string;
+  description: string;
 }
 
 interface RssItem {
@@ -15,6 +16,7 @@ interface RssItem {
   title: string;
   link: string;
   pubDate: string;
+  description: string;
 }
 
 const LatestYoutube = ({ channelId }: { channelId: string }) => {
@@ -40,6 +42,7 @@ const LatestYoutube = ({ channelId }: { channelId: string }) => {
               thumbnail: `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`,
               link: item.link,
               pubDate: item.pubDate,
+              description: item.description,
             };
           });
           setVideos(fetchedVideos);
@@ -128,10 +131,13 @@ const LatestYoutube = ({ channelId }: { channelId: string }) => {
                       loading="lazy"
                     />
                   </div>
-                  <h3 className="font-medium text-sm line-clamp-2 leading-snug">
+                  <h3 className="font-medium text-sm line-clamp-1 leading-snug">
                     {video.title}
                   </h3>
-                  <p className="text-xs opacity-60">
+                  <p className="text-xs opacity-60 line-clamp-2">
+                    {video.description}
+                  </p>
+                  <p className="text-xs opacity-40 mt-1">
                     {new Date(video.pubDate).toLocaleDateString(undefined, {
                       year: 'numeric',
                       month: 'short',
