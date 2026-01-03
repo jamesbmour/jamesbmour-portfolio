@@ -3,7 +3,9 @@ uvicorn
 python-dotenv
 langchain
 langchain-openai
-langchain-pinecone
-pinecone-client
+langchain-chroma
+langchain-community
+chromadb
 pypdf
 tiktoken
+requests

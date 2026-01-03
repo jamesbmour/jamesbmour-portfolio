@@ -2,6 +2,9 @@ import React, { useState, useRef, useEffect } from 'react';
 import { BsChatQuoteFill, BsSend, BsX } from 'react-icons/bs';
 import axios from 'axios';
 
+// Configure API URL from environment or default to localhost
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+
 interface Message {
   role: 'user' | 'assistant';
   content: string;
@@ -34,7 +37,7 @@ const ChatWidget: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:8000/chat/', {
+      const response = await axios.post(`${API_BASE_URL}/chat/`, {
         message: userMessage
       });
       
@@ -44,9 +47,21 @@ const ChatWidget: React.FC = () => {
       }]);
     } catch (error) {
       console.error('Chat error:', error);
-      setMessages(prev => [...prev, { 
-        role: 'assistant', 
-        content: 'Sorry, I encountered an error. Please try again later.' 
+      let errorMessage = 'Sorry, I encountered an error. Please try again later.';
+
+      if (axios.isAxiosError(error)) {
+        if (error.response?.status === 429) {
+          errorMessage = 'Too many requests. Please wait a moment and try again.';
+        } else if (error.response?.status === 500) {
+          errorMessage = 'Server error. The assistant is temporarily unavailable.';
+        } else if (!error.response) {
+          errorMessage = 'Cannot connect to the assistant. Please check your internet connection.';
+        }
+      }
+
+      setMessages(prev => [...prev, {
+        role: 'assistant',
+        content: errorMessage
       }]);
     } finally {
       setIsLoading(false);
