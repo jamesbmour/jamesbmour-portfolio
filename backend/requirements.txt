@@ -9,3 +9,5 @@ chromadb
 pypdf
 tiktoken
 requests
+python-multipart
+pydantic

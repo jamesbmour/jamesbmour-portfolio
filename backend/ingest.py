@@ -10,6 +10,10 @@ from langchain_chroma import Chroma
 from langchain_core.documents import Document
 from datetime import datetime
 import requests
+from qdrant_client import QdrantClient
+from qdrant_client.http.models import Distance, VectorParams
+from langchain_qdrant import QdrantVectorStore
+from langchain_community.vectorstores import DuckDB
 
 load_dotenv()
 
@@ -20,6 +24,13 @@ COLLECTION_NAME = os.getenv("COLLECTION_NAME", "portfolio-chat")
 GITHUB_USERNAME = os.getenv("GITHUB_USERNAME", "jamesbmour")
 DEV_TO_USERNAME = os.getenv("DEV_TO_USERNAME", "jamesbmour")
 PORTFOLIO_CONFIG_PATH = os.getenv("PORTFOLIO_CONFIG_PATH", "../gitprofile.config.ts")
+QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
+QDRANT_URL = os.getenv("QDRANT_URL")
+
+qdrant_client = QdrantClient(
+    url=QDRANT_URL,
+    api_key=QDRANT_API_KEY,
+)
 
 
 class PortfolioIngestion:
