@@ -104,3 +104,12 @@ chroma_db/
 backend/chroma_db/
 
 archive/
+backend/archive/
+
+# Local development
+.env.local
+backend/.env.local
+.claude/
+.codex/
+.gemini/
+.specify/
