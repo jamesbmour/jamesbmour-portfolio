@@ -2,6 +2,7 @@
   "name": "@arifszn/gitprofile",
   "description": "Create an automatic portfolio based on GitHub profile",
   "version": "3.0.0",
+  "packageManager": "pnpm@10.27.0",
   "type": "module",
   "license": "MIT",
   "author": "arifszn",
