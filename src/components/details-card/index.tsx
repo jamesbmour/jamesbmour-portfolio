@@ -4,7 +4,7 @@ import {
   AiFillInstagram,
   AiFillMediumSquare,
 } from 'react-icons/ai';
-import { SiTwitter } from 'react-icons/si';
+import { SiX } from 'react-icons/si';
 import { CgDribbble } from 'react-icons/cg';
 import { RiPhoneFill, RiMailFill } from 'react-icons/ri';
 import { Fragment } from 'react';
@@ -149,7 +149,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
               />
               {social?.twitter && (
                 <ListItem
-                  icon={<SiTwitter />}
+                  icon={<SiX />}
                   title="Twitter:"
                   value={social.twitter}
                   link={`https://twitter.com/${social.twitter}`}
