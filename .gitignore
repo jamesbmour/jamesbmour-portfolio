@@ -112,4 +112,18 @@ backend/.env.local
 .claude/
 .codex/
 .gemini/
+.specify//
+
+
+# Local development
+.env.local
+backend/.env.local
+.claude/
+.codex/
+.gemini/
 .specify/
+
+# python 
+backend/venv/
+backend/__pycache__/
+.kilocode/

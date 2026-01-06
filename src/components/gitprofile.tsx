@@ -34,10 +34,10 @@ import Footer from './footer';
 // import '@n8n/chat/style.css';
 import LatestYoutube from './latest-youtube';
 
-// import '../styles/chat.css'; // Import the chat CSS
+import '../styles/chat.css'; // Import the chat CSS
 import './variables.css';
-
-// import Chatbot from './chatbot';
+import './chatbot/chatbot.css'; // Import chatbot styles
+import Chatbot from './chatbot';
 // import Header from './header'; // Adjust the path as necessary
 // import ResumeViewer from './ResumeViewer/ResumeViewer'; // Adjust the path as necessary
 // import '@n8n/chat/style.css';
@@ -350,6 +350,9 @@ const GitProfile = ({ config }: { config: Config }) => {
             {/* <StreamlitApp /> */}
           </>
         )}
+
+        {/* RAG-Powered Chatbot */}
+        <Chatbot />
       </div>
     </HelmetProvider>
   );
