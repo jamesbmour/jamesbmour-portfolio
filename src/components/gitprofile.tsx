@@ -37,7 +37,7 @@ import LatestYoutube from './latest-youtube';
 import '../styles/chat.css'; // Import the chat CSS
 import './variables.css';
 import './chatbot/chatbot.css'; // Import chatbot styles
-import Chatbot from './chatbot';
+// import Chatbot from './chatbot';
 // import Header from './header'; // Adjust the path as necessary
 // import ResumeViewer from './ResumeViewer/ResumeViewer'; // Adjust the path as necessary
 // import '@n8n/chat/style.css';
@@ -352,7 +352,7 @@ const GitProfile = ({ config }: { config: Config }) => {
         )}
 
         {/* RAG-Powered Chatbot */}
-        <Chatbot />
+        {/* <Chatbot /> */}
       </div>
     </HelmetProvider>
   );
