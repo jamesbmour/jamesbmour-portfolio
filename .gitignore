@@ -127,3 +127,4 @@ backend/.env.local
 backend/venv/
 backend/__pycache__/
 .kilocode/
+.vercel
