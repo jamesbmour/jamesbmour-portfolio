@@ -3,10 +3,7 @@ import ReactDOM from 'react-dom/client';
 import GitProfile from './components/gitprofile.tsx';
 import { DevSupport } from '@react-buddy/ide-toolbox';
 import { ComponentPreviews, useInitial } from './dev';
-import { inject } from '@vercel/analytics';
-
-// Initialize Vercel Web Analytics
-inject();
+import { Analytics } from '@vercel/analytics/react';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -18,6 +15,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     >
       <GitProfile config={CONFIG} />
     </DevSupport>
-    ;
+    <Analytics />
   </React.StrictMode>,
 );
